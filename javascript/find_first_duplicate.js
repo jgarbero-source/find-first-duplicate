@@ -1,5 +1,15 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  const uniques = new Set();
+
+  for (const value of arr) {
+    if (uniques.has(value)) {
+      return value;
+    }
+    console.log(value)
+    uniques.add(value)
+  }
+
+  return -1
 }
 
 if (require.main === module) {
@@ -17,3 +27,5 @@ module.exports = findFirstDuplicate;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+//So, I think I need to go through the array
